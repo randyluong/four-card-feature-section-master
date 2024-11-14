@@ -23,19 +23,124 @@ body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
+ 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+header {
+  color: var(--dark-blue);
+  margin-top: 5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 2.3rem;
+  line-height: 3rem;
+}
+
+header h1 span {
+  font-weight: 200;
+}
+
+header p {
+  width: 65%;
+  margin: 1.3rem auto 0 auto;
+  line-height: 1.5rem;
+  color: var(--grayish-blue );
+}
+
+  /* Feature Section */
+.feature-section {
+  width: 90%;
+  margin: 0 auto 10rem auto;
+}
+
+/* Feature Cards */
+.featured-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  max-width: 70rem;
+  margin: 4rem auto 0 auto;
+}
+
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  position: relative;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  border-top-style: solid;
+  border-top-width: 5px;
+  max-width: 350px;
+  height: 15.5rem;
+}
+
+.card-one,
+.card-four,
+.grid-center-container {
+  place-self: center;
+}
+
+.grid-center-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
 .card-one {
-    border-color: var(--cyan);
-  }
-  
-  .card-two {
-    border-color: var(--red);
-  }
-  
-  .card-three {
-    border-color: var(--orange);
-  }
-  
-  .card-four {
-    border-color: var(--blue);
-  }
+  border-color: var(--cyan);
+}
+
+.card-two {
+  border-color: var(--red);
+}
+
+.card-three {
+  border-color: var(--orange);
+}
+
+.card-four {
+  border-color: var(--blue);
+}
+
+.card-info {
+  padding: 1.7rem 2.3rem;
+}
+
+.card-info h2 {
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+}
+
+.card-info p {
+  color: var(--grayish-blue);
+  font-size: 14px;
+  line-height: 1.5rem;
+  padding-top: 9px;
+}
+
+/* icon */
+.icon {
+  position: static;
+  margin-left: 75%;
+  margin-top: 2%;
+
+}
+
+@media (max-width: 769px) {
+    .featured-cards,
+    .grid-center-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+}
